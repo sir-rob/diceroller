@@ -35,14 +35,17 @@ class MainActivity : AppCompatActivity() {
         resultTextView.text = diceRoll.toString()
 
         //toast is used for a quick pop up message, falls behind if too many at a time
-        when (diceRoll) {
-            1 -> Toast.makeText(this, "You Won", Toast.LENGTH_SHORT).show()
-            2 -> Toast.makeText(this, "Sorry you lost", Toast.LENGTH_SHORT).show()
-            3 -> Toast.makeText(this, "Try again", Toast.LENGTH_SHORT).show()
-            4 -> Toast.makeText(this, "Better luck next time", Toast.LENGTH_SHORT).show()
-            5 -> Toast.makeText(this, "You win some you lose some", Toast.LENGTH_SHORT).show()
-            6 -> Toast.makeText(this, "Nope, Come back again", Toast.LENGTH_SHORT).show()
+        val message = when (diceRoll) {
+            1 -> "You Won"
+            2 -> "Sorry you lost"
+            3 -> "Try again"
+            4 -> "Better luck next time"
+            5 -> "You win some you lose some"
+            6 -> "Nope, Come back again"
+            else -> ""
         }
+
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 }
 
