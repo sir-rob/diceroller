@@ -10,6 +10,7 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
+        android:layout_marginTop="16dp"
         android:text="@string/roll"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
